@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+<!-- Συναρτηση για εμφανιση προτεινωμενων καθηγητων βαση αυτων που εχει πληκτρολογησει ο χρηστης -->
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "search_response.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+function redirect(){
+<!-- Περασμα ονοματος στην σελιδα -->
+    window.location.replace("make_content.php?name=" + document.getElementById("txtName").value)
+}
+
+</script>
+</head>
+<body>
+
+Type professor name : <input type="search" id="txtName" onkeyup="showHint(this.value)" value="Professor Name"> 
+<p>Suggestions: <span id="txtHint"></span></p>
+
+<input id="sbtButton" type="submit" onclick="redirect()" value="Submit" />
+
+</body>
+</html>

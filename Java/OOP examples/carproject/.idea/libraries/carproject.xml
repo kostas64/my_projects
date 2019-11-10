@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="carproject">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/carproject.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

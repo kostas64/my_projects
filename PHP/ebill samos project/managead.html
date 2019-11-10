@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset=utf-8>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link href="../assets/css/main.css" rel="stylesheet">
+      <!-- Website CSS style -->
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+      <title>admin area</title>
+   </head>
+   <body>
+      <!-- header -->
+      <header>
+         <div class="container">
+            <img src="assets/images/logo-isld.png">
+            <img src="assets/images/slogan.png">
+         </div>
+      </header>
+      <!-- end header -->
+      <!-- menu navbar -->
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand title-nav" href="#">e-ΛΟΓΑΡΙΑΣΜΟΙ ΝΕΡΟΥ (είσοδος διαχειριστή)</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="logoutad.php"><i class="fa fa-user" aria-hidden="true"></i> Αποσύνδεση</a></li>
+               </ul>
+            </div>
+            <!--/.nav-collapse -->
+         </div>
+      </nav>
+      <!-- end navbar -->
+      <div class="title-upper">
+         <h1>Αποστολή Ειδοποιήσεων</h1>
+      </div>
+      <div class="w3-agileits-info">
+         <form class="form" id="form1" method="post" action="send_notification.php">
+           
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Δημοτική Κοινότητα</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="commun">
+                    <option  disabled selected > Διαλέξτε κοινότητα</option>
+                    <option>Α_ΒΑΘΥ_ΝΕΚΡΟΤΑΦΕΙΟ</option>
+                    <option>ΑΓ_ΚΩΝ_ΝΟΣ</option>
+                    <option>ΑΜΠΕΛΟΥ</option>
+                    <option>ΑΡΔΕΥΣΗ_ΜΕΣΟΚΑΜΠΟΥ</option>
+                   <option>ΒΑΘΕΟΣ</option>
+                   <option>ΒΑΘΕΟΣ_ΕΞΟΧΩΝ</option>
+                   <option>ΒΑΘΕΟΣ_ΝΕΑΠΟΛΗ</option>
+                   <option>ΒΟΥΡΛΙΩΤΩΝ</option>
+                   <option>ΚΟΚΚΑΡΙΟΥ</option>
+                   <option>ΜΑΝΩΛΑΤΩΝ</option>
+                   <option>ΠΑΛΑΙΟΚΑΣΤΡΟΥ</option>
+                   <option>ΣΑΜΙΩΝ</option>
+                   <option>ΣΤΑΥΡΙΝΗΔΩΝ</option>
+                   <option>ΣΤΡΑΤΙΩΤΙΚΕΣ_ΜΟΝΑΔΕΣ</option>
+                </select>
+            </div>
+            
+            <div class="form-group submit ">
+               <input class='btn btn-lg' type='submit' value='ΑΠΟΣΤΟΛΗ EMAIL'>
+            </div>
+            
+         </form>
+      </div>
+       <div class="title-upper">
+         <h1>Κατάλογος Κινητών Αριθμών </h1>
+      </div>
+      <div class="w3-agileits-info">
+         <form class="form" id="form2" method="post" action="create_phone_log.php">
+             <div class="form-group">
+                <label for="exampleFormControlSelect1">Δημοτική Κοινότητα</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="commun">
+                    <option  disabled selected > Διαλέξτε κοινότητα</option>
+                    <option>Α_ΒΑΘΥ_ΝΕΚΡΟΤΑΦΕΙΟ</option>
+                    <option>ΑΓ_ΚΩΝ_ΝΟΣ</option>
+                    <option>ΑΜΠΕΛΟΥ</option>
+                    <option>ΑΡΔΕΥΣΗ_ΜΕΣΟΚΑΜΠΟΥ</option>
+                   <option>ΒΑΘΕΟΣ</option>
+                   <option>ΒΑΘΕΟΣ_ΕΞΟΧΩΝ</option>
+                   <option>ΒΑΘΕΟΣ_ΝΕΑΠΟΛΗ</option>
+                   <option>ΒΟΥΡΛΙΩΤΩΝ</option>
+                   <option>ΚΟΚΚΑΡΙΟΥ</option>
+                   <option>ΜΑΝΩΛΑΤΩΝ</option>
+                   <option>ΠΑΛΑΙΟΚΑΣΤΡΟΥ</option>
+                   <option>ΣΑΜΙΩΝ</option>
+                   <option>ΣΤΑΥΡΙΝΗΔΩΝ</option>
+                   <option>ΣΤΡΑΤΙΩΤΙΚΕΣ_ΜΟΝΑΔΕΣ</option>
+                </select>
+            </div>
+             <div class="form-group submit ">
+             <input class='btn btn-lg' type='submit' value='ΛΗΨΗ ΚΑΤΑΛΟΓΟΥ'>
+              </div>
+             </form>
+             </div>
+             <div class="title-upper">
+              <h1>Λίστα Ηλεκτρονικών Λογαριασμών </h1>
+              </div>
+             <div class="w3-agileits-info">
+         <form class="form" id="form3" action="create_ebill_list.php">
+             <div class="form-group">
+            </div>
+             <div class="form-group submit ">
+             <input class='btn btn-lg' type='submit' value='ΛΗΨΗ ΛΙΣΤΑΣ'>
+              </div>
+             </form>
+             </div>
+      <footer>
+         <div class="container">
+            Powered by <a href="http://www.obiorange.gr">obiorange</a><img src="../assets/images/obi-logo.png" width="80">
+         </div>
+      </footer>
+      <!-- js -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src='assets/js/bootstrap.min.js'></script>
+      <script src='assets/js/jquery.validate.min.js'></script>
+      <script src='assets/js/formAnimation.js'></script>
+      <script src='assets/js/shake.js'></script>
+      <!-- //js -->	
+   </body>
+</html>
