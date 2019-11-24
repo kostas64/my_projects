@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - VresTiLeksi",
+            "request": "launch",
+            "mainClass": "VresTiLeksi"
+        }
+    ]
+}

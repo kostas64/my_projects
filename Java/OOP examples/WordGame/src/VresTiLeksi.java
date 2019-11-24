@@ -1,4 +1,4 @@
-//Κωνσταντινος Ευκαρπιδης - icsd15051 - Ασκηση3
+﻿//Κωνσταντινος Ευκαρπιδης - icsd15051 - Ασκηση3
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,7 +20,7 @@ public class VresTiLeksi {
       while((oles.size()>=3) && (apotelesma)) //Του λεω οτι μπορει να παιζει οσο υπαρχουν λεξεις στην λιστα με ολες τις λεξεις και αν το εχει κερδισει
       {
            Gemisma(oles,mono_paix);
-           apotelesma=Sunexeia(oles,mono_paix,player);
+           apotelesma=Sunexeia(mono_paix,player);
       }
       if((oles.size()<3) && (apotelesma)) //Τελιωνει το παιχνιδι γιατι δεν υπαρχουν αλλες λεξεις
       {
@@ -85,7 +85,7 @@ public class VresTiLeksi {
                 {
                     System.out.print(only.get(i).getPerigrafi() + "\t");
                    System.out.print(only.get(i).getLeksi().charAt(0)); //Εμφανιση 1ου γραμματος
-                     for(int j=1; j<only.get(i).getLeksi().length()-1; j++)
+                     for(int j=0; j<only.get(i).getLeksi().length(); j++)
                         {
                          xaraktires.add(only.get(i).getLeksi().charAt(j)); //Κατω παυλες
                           System.out.print(" _ ");
@@ -119,7 +119,7 @@ public class VresTiLeksi {
                      {
                 System.out.println("Μπράβο. Μαντέψατε σωστά!!!");
               
-                    for(int j=1; j<only.get(answer-1).getLeksi().length()-1; j++) //Αφαιρω τους χαρακτηρες της λεξης που βρηκε
+                    for(int j=0; j<only.get(answer-1).getLeksi().length(); j++) //Αφαιρω τους χαρακτηρες της λεξης που βρηκε
                                {
                      xaraktires.remove((Character)only.get(answer-1).getLeksi().charAt(j)); 
                                }                   
