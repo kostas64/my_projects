@@ -1,0 +1,7 @@
+This game is played with 2 players.
+First start the player with symbol "o"
+and second the player with "x". In order to 
+win you must have 3 same symbols at the same 
+line or diagonal. If all boxes are full but
+no match to win condition for both players ,
+then the game is draw.
